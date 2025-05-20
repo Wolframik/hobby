@@ -127,6 +127,17 @@ main
     display: flex;
     justify-content: center;
 }
+
+#main-select h1
+{
+    font-size: calc(250vh /50);
+    margin: 0 auto;
+    margin-top: 1vh;
+    background: radial-gradient(circle,blue,cyan);
+    background-clip: text;
+    color:transparent;
+    padding-bottom: 0.75vh;
+}
 #main-puzzle 
 {
     display: flex;
@@ -143,6 +154,45 @@ main
     font-size: calc(250vh /50);
     margin: 0 auto;
     margin-top: 1vh;
+    background: radial-gradient(circle,blue,cyan);
+    background-clip: text;
+    color:transparent;
+}
+
+
+
+#main-home 
+{
+    display: flex;
+    flex-direction: column;  
+    align-items: center;        
+    height: 67%;
+    background-color: var(--backgroundColor);             
+    text-align: center;  
+    color: white;   
+}
+
+
+
+#main-home h1
+{
+    font-size: calc(250vh /50);
+    margin: 0 auto;
+    margin-top: 1vh;
+    background: radial-gradient(circle,blue,cyan);
+    background-clip: text;
+    color:transparent;
+}
+
+#main-home p
+{
+    font-size: calc(100vh /37);
+    width: 80%;
+    border-top: 0.2vh solid red;
+
+    padding-top: 1vh;
+    margin: 0;
+    margin-bottom: 2vh;
 }
 
 
@@ -186,7 +236,7 @@ section
     width: 20%;
     height: 50%;
     padding: 0.2%;
-    border-radius: 1rem;
+    border-radius: 1vh;
     background: #f7ba2b;
     background: var(--background);
     position: relative;
@@ -201,15 +251,37 @@ section
     --color: #181818;
     background: var(--color);
     color: var(--color);
-    display: flex;  
-    justify-content: center;
-    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    border-radius: .7rem;
+    border-radius: 0.7vh;
     color:white;
+    width: 100%;
+    overflow-wrap: break-word;
+    padding-left: 1vh;
+    padding-right: 1vh;
+}
+.card-info h2
+{
+    text-align: center;
+    font-size: calc(100vh/35);
+    margin-bottom: 0;
+    background: radial-gradient(circle,cyan,blue);
+    background-clip: text;
+    color:transparent;
+
 }
 
+
+.card-info p
+{
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+    font-size: calc(100vh/43);
+}
 section::after
 {
     position: absolute;
@@ -221,7 +293,7 @@ section::after
     height: 100%;
     width: 100%;
     transform: scale(0.8);
-    filter: blur(2.5em);
+    filter: blur(2.5vh);
     background: #f7ba2b;
     background: var(--background);
     transition: opacity .5s;
@@ -272,21 +344,18 @@ article
 
 }
 
-.wrapper
+article p
 {
-    width: min(10vw, 15VW); 
-  min-width: 200px; 
-  margin: auto;
+    margin-bottom: 0.5vh;
 }
 
-.wrapper audio
+article audio
 {
-    width: 100%;
-  display: block;
+    width: 20vh;
+    height: 5vh;
+    min-width: 20vh;
+    min-height:5vh;
 }
-
-
-
 
 
 .GameText
@@ -358,10 +427,10 @@ article
 }
 
 /* Responsive border thickness using clamp */
-.bordertop    { border-top: clamp(2px, 2vw, 7px) solid var(--border-color); }
-.borderbottom { border-bottom: clamp(2px, calc(0.3vw + 0.3vh), 7px) solid var(--border-color); }
-.borderleft   { border-left: clamp(2px, calc(0.3vw + 0.3vh), 7px) solid var(--border-color); }
-.borderright  { border-right: clamp(2px, calc(0.3vw + 0.3vh), 7px) solid var(--border-color); }
+.bordertop    { border-top: 0.25vw solid var(--border-color); }
+.borderbottom { border-bottom: 0.25vw solid var(--border-color); }
+.borderleft   { border-left: 0.25vw solid var(--border-color); }
+.borderright  { border-right: 0.25vw solid var(--border-color); }
 
 .cell, .cellus 
 {
@@ -374,10 +443,10 @@ article
 }
 
 /* Permanent borders */
-.permabottom { border-bottom: clamp(2px, 0.5vw, 7px) solid black; }
-.permatop    { border-top: clamp(2px, 0.5vw, 7px) solid black; }
-.permaleft   { border-left: clamp(2px, 0.5vw, 7px) solid black; }
-.permaright  { border-right: clamp(2px, 0.5vw, 7px) solid black; }
+.permabottom { border-bottom: 0.25vw solid black; }
+.permatop    { border-top: 0.25vw solid black; }
+.permaleft   { border-left: 0.25vw solid black; }
+.permaright  { border-right: 0.25vw solid black; }
 
 #startDot 
 {
@@ -407,7 +476,7 @@ article
 
 #main-puzzle p 
 {
-    font-size: calc(100vh /40);
+    font-size: calc(100vh /37);
     width: 80%;
     border-top: 0.2vh solid red;
 
@@ -425,3 +494,10 @@ article
     gap: 1vw;
     flex-wrap: wrap;
 }
+
+#zdjecia
+{
+    display:flex;
+    gap: 1vw;
+}
+
