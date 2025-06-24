@@ -13,6 +13,7 @@ html {height:100%}
     --border-color: black;
     --transition-time: 1s;
 
+    --animation-time: 15s;
     
 }
 
@@ -43,7 +44,11 @@ figure img
     width: 40%;
     height: auto;
     border-radius: 50%;
-    animation: rot 15s infinite 5s;
+    animation: rot var(--animation-time) infinite 5s ease;
+}
+figure img:hover
+{
+    cursor: pointer;
 }
 figcaption 
 {
@@ -182,6 +187,7 @@ main
     background: radial-gradient(circle,blue,cyan);
     background-clip: text;
     color:transparent;
+    margin-bottom: 1vh;
 }
 
 #main-home p
@@ -195,10 +201,94 @@ main
     margin-bottom: 2vh;
 }
 
+#main-designers 
+{
+    display: flex;
+    justify-content: center;  
+    align-items: center;        
+    height: 67%;
+    background-color: var(--backgroundColor);             
+    text-align: center;  
+    color: white; 
+    gap: 5vh;
+    flex-wrap:wrap;
+}
 
-@keyframes scrollLeft {
-    0% {transform: translateX(150vw); color:black; }
-    100% {transform: translateX(-150vw); color: white;}
+#main-designers h1
+{
+    font-size: calc(250vh /65);
+    margin: 0 auto;
+    margin-top: 1vh;
+    background: radial-gradient(circle,green,cyan);
+    background-clip: text;
+    color:transparent;
+    padding-bottom: 0.75vh;
+}
+
+.human
+{
+    background-color: gray;
+    width:30vh;
+    height: 45vh;
+    border-radius: 2vh;
+}
+
+
+.human:hover
+{
+    box-shadow: 10px 10px 7px black;
+    transform: translateY(-20px);
+
+}
+.human img:hover
+{
+    cursor: pointer;
+}
+
+#main-designers label
+{
+    font-size: calc(100vh / 50);
+
+    color:white;
+    text-align: center;
+    padding: 0.5vh;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    text-decoration: none;
+}
+
+#main-designers img 
+{
+    width: 19vh;
+}
+
+#main-designers p
+{
+    
+
+    font-size: 3vh;
+    border-top: 0.2vh solid black;
+    padding: 1vh;
+    padding-top: 0.5vh;
+    margin-top: 1vh;
+    margin-bottom: 0;
+
+    color: yellow;
+}
+#main-designers p:hover
+{
+    cursor:default;
+}
+#main-designers h1:hover
+{
+    cursor:default;
+}
+
+
+@keyframes scrollLeft 
+{
+    0% {transform: translateX(200vw); color:black; }
+    100% {transform: translateX(-200vw); color: white;}
 }
 
 footer 
@@ -214,14 +304,15 @@ footer
   
 }
 
-footer p {
+footer p 
+{
     margin: 0;
     display: block;
     font-size: calc(2vw + 2vh);
     text-align: center;
     color: black;
     white-space: nowrap;
-    animation: scrollLeft 10s linear infinite; /* Increased animation duration */
+    animation: scrollLeft 10s linear infinite; 
 }
 
 ul 
@@ -268,9 +359,7 @@ section
     text-align: center;
     font-size: calc(100vh/35);
     margin-bottom: 0;
-    background: radial-gradient(circle,cyan,blue);
-    background-clip: text;
-    color:transparent;
+
 
 }
 
@@ -298,6 +387,22 @@ section::after
     background: var(--background);
     transition: opacity .5s;
 }
+
+section:nth-child(even) h2
+{
+    background: radial-gradient(circle,cyan,blue);
+    background-clip: text;
+    color:transparent;
+}
+
+section:nth-child(odd) h2
+{
+    background: radial-gradient(circle,lime,darkgreen);
+    background-clip: text;
+    color:transparent;
+}
+
+
 
 
 section:nth-child(even):hover
@@ -409,9 +514,9 @@ article audio
     grid-template-rows: repeat(6, 1fr);
     width: 10vw;
     height: 10vw;
-    aspect-ratio: 1 / 1;  /* keep square grid */
+    aspect-ratio: 1 / 1;  
     background: #f5a623;
-    border-radius: clamp(0.5rem, 2vw, 2rem); /* scalable radius */
+    border-radius: clamp(0.5rem, 2vw, 2rem); 
 }
 
 .cell 
@@ -420,13 +525,11 @@ article audio
     position: relative;
 }
 
-/* Cell with background */
 .cellus 
 {
     background-color: var(--grid-color);
 }
 
-/* Responsive border thickness using clamp */
 .bordertop    { border-top: 0.25vw solid var(--border-color); }
 .borderbottom { border-bottom: 0.25vw solid var(--border-color); }
 .borderleft   { border-left: 0.25vw solid var(--border-color); }
@@ -442,7 +545,6 @@ article audio
     transition: border-color var(--transition-time) linear;
 }
 
-/* Permanent borders */
 .permabottom { border-bottom: 0.25vw solid black; }
 .permatop    { border-top: 0.25vw solid black; }
 .permaleft   { border-left: 0.25vw solid black; }
@@ -500,4 +602,12 @@ article audio
     display:flex;
     gap: 1vw;
 }
+
+#zdjecia img 
+{
+    width: 70vh;
+    height: 30vh;
+}
+
+
 
