@@ -6,7 +6,7 @@ body
     overflow: hidden;
 }
     
-section 
+body
 {
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@ section
     align-items: center;
     
     height: 100vh;
-    gap: 20vh; 
+    gap: 27vh; 
 }
     
 @keyframes rotate
@@ -27,20 +27,43 @@ section
     100% {transform: rotate(0deg);}
 }
 
+#cont 
+{
+    width: 13%;
+    height: auto;
+    position: relative;
+    animation: rotate 6s infinite;
+}
+
 #log
 {
-    width: 15%;
-    height: auto;
+    width: 100%;
     border-radius: 50%;
-    animation: rotate 6s infinite;
-    
+    z-index: 2;
+
 }
 
 
-
-#knife 
+.knife 
 {
     background-color: blue;
     height: 25vh;
     width: 1vw;
+    z-index: 1;
+}
+
+.knife.invisible
+{
+    display: none;
+}
+
+@keyframes launch
+{
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-10vh);}
+}
+
+.knife.launched
+{
+    animation: launch 0.1s forwards;
 }
