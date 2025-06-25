@@ -1,0 +1,32 @@
+body 
+{
+    background-color: gray;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+    
+section 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100vh;
+    gap: 20vh; 
+}
+    
+#log
+{
+    width: 15%;
+    height: auto;
+    border-radius: 50%;
+}
+
+#knife 
+{
+    background-color: blue;
+    height: 25vh;
+    width: 1vw;
+}
